@@ -1,0 +1,42 @@
+GET http://localhost:5300
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTE4NTU2MjcsImV4cCI6MTY5MTg1NTY0MiwiYXVkIjoiNjRkNjM5YmFlN2NkMTUyYzQ3NDE2MmU3IiwiaXNzIjoiICJ9.W2wgbZvNZgPfBej-VJitM1F78JYfx8rKw_F99SEyQZY
+
+###
+
+##Login Route
+POST http://localhost:5300/auth/login
+Content-Type: application/json
+
+{
+    "email": "mickabolori@gmail.com",
+    "password": "12345678"
+}
+
+
+###
+# REGISTER ROUTE
+POST http://localhost:5300/auth/register
+Content-Type: application/json
+
+{
+    "email": "mickabolori2364@gmail.com",
+    "password": "12345678"
+}
+
+###
+# Refresh tokenROUTE
+POST http://localhost:5300/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTE4NTU2MjcsImV4cCI6MTY5MTg1NTY0MiwiYXVkIjoiNjRkNjM5YmFlN2NkMTUyYzQ3NDE2MmU3IiwiaXNzIjoiICJ9.W2wgbZvNZgPfBej-VJitM1F78JYfx8rKw_F99SEyQZY"
+}
+
+###
+# Refresh tokenROUTE
+DELETE http://localhost:5300/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTIwODExMjksImV4cCI6MTcyMzYzODcyOSwiYXVkIjoiNjRkNjM5YmFlN2NkMTUyYzQ3NDE2MmU3IiwiaXNzIjoiICJ9.-AHMh7Uy_losTDwCckX8GeHSA6lY0OO8DDDeE8ju2BQ"
+}
