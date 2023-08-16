@@ -5,16 +5,49 @@ const bcrypt = require('bcrypt')
 
 //Creating a user model
 const UserSchema = new Schema({
+    firstName:{
+        type: String,
+        required: true,
+        lowercase: true
+    },
+
+    lastName:{
+        type: String,
+        required: true,
+        lowercase: true
+    },
+
     email:{
         type: String,
         required: true,
         lowercase: true,
         unique: true,
     },
+
     password:{
         type: String,
         required: true,
-    }
+    },
+
+    field:{
+        type: String,
+        required: true,
+        lowercase: true
+    },
+
+    profession:{
+        type: String,
+        required: true,
+        lowercase: true
+    },
+
+    aboutYou:{
+        type: String,
+        required: true,
+        lowercase: true
+    },
+
+
 })
 
 //hashing the user password

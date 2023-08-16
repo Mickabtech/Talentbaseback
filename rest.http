@@ -1,10 +1,10 @@
-GET http://localhost:5300
+GET https://hire-us-api.onrender.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTE4NTU2MjcsImV4cCI6MTY5MTg1NTY0MiwiYXVkIjoiNjRkNjM5YmFlN2NkMTUyYzQ3NDE2MmU3IiwiaXNzIjoiICJ9.W2wgbZvNZgPfBej-VJitM1F78JYfx8rKw_F99SEyQZY
 
 ###
 
 ##Login Route
-POST http://localhost:5300/auth/login
+POST https://hire-us-api.onrender.com/auth/login
 Content-Type: application/json
 
 {
@@ -15,17 +15,17 @@ Content-Type: application/json
 
 ###
 # REGISTER ROUTE
-POST http://localhost:5300/auth/register
+POST https://hire-us-api.onrender.com/auth/register
 Content-Type: application/json
 
 {
-    "email": "mickabolori2364@gmail.com",
+    "email": "mickabolori@gmail.com",
     "password": "12345678"
 }
 
 ###
 # Refresh tokenROUTE
-POST http://localhost:5300/auth/refresh-token
+POST https://hire-us-api.onrender.com/auth/refresh-token
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ Content-Type: application/json
 
 ###
 # Refresh tokenROUTE
-DELETE http://localhost:5300/auth/logout
+DELETE https://hire-us-api.onrender.com/auth/logout
 Content-Type: application/json
 
 {
