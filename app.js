@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const createError = require("http-errors");
 const dotenv = require('dotenv');
 require('./helpers/init_mongodb');
+const cors = require("cors");
 const { verifyAccessToken } = require('./helpers/jwtHelper')
 require('./helpers/init_redis')
 
@@ -17,6 +18,7 @@ dotenv.config();
 const app = express();
 
 app.use(morgan('dev'));
+app.use(cors())
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
